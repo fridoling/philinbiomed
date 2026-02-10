@@ -1,0 +1,535 @@
+/*
+Theme Name: PhilInBiomed
+Theme URI: https://wordpress.org/themes/twentytwentythree
+Author: Fridolin Gross
+Author URI: https://wordpress.org
+Description: Custom theme for PhilInBiomed website based on Twenty Twenty-Three.
+Requires at least: 6.1
+Tested up to: 6.8
+Requires PHP: 5.6
+Version: 1.6
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: philinbiomed
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+
+.member-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.member-card {
+  background: #f0f7fdff;
+  padding: 0 1rem 1rem;
+  text-align: left;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.member-card:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.member-name {
+min-height: 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.member-link {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.read-more-link {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.member-description {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.member-photo {
+    width: 200px auto;      /* desired width */
+    height: 200px;       /* desired height */
+    overflow: hidden;    /* crop overflow */
+    margin: 0 auto;      /* center horizontally */
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* scale/crop to fill the box */
+}
+
+.single-member {
+    text-align: center;
+    /* max-width: 400px; */
+    /* margin: 1rem auto; */
+}
+
+.single-member-photo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+
+.single-member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-member-name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.single-member-short-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Institution Gallery Styles */
+.institution-gallery {
+    display: flex;
+    flex-direction: column;   /* one institution per row */
+    gap: 2rem;
+    width: 100%;
+}
+
+.institution-card {
+    display: flex;
+    flex-direction: column;   /* stack: image → title → description */
+    gap: 1rem;
+    padding: 2rem;
+    background: #f0f7fdff;
+    width: 60%;
+    align: center;
+    margin: 0 auto;           /* center card */
+    max-width: 100%;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.institution-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.institution-card:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.institution-photo img {
+    height: 75px;     /* fixed height */
+    width: auto;       /* preserve aspect ratio */
+    display: block;
+    margin: 0 auto;    /* center horizontally */
+}
+
+
+/* Content area */
+.institution-gallery-content {
+    flex: 1;
+}
+
+.institution-name {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;       /* center title text */
+}
+
+.institution-description {
+    margin: 0;
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: left;       /* center description */
+    font-family: 'DM Sans', sans-serif;
+}
+
+.newsletter-archive h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.newsletter-archive ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.newsletter-archive li {
+    margin: 0.3rem 0;
+}
+
+.newsletter-html, 
+.newsletter-html * {
+    background-color: white !important;
+}
+
+
+.newsletter-container {
+    max-width: 50%;      /* Viewer width relative to page */
+    margin: 0 auto;      /* Center horizontally */
+    display: block;
+}
+
+.newsletter-container iframe {
+    width: 100%;         /* Take up full width of container */
+    height: 80vh;        /* Or fixed px like 800px */
+    border: none;
+}
+
+/* Scope styles to the block only */
+.pibm-single-job {
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    font-family: inherit; /* Keep site font */
+}
+
+/* Title */
+.pibm-single-job .job-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+/* Meta list */
+.pibm-single-job .job-meta {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.pibm-single-job .job-meta li {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.pibm-single-job .job-meta li strong {
+    color: #444;
+    min-width: 110px;
+}
+
+/* Job description */
+.pibm-single-job .job-description {
+    margin-top: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+/* Links */
+.pibm-single-job a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.pibm-single-job a:hover {
+    text-decoration: none;
+}
+
+/* Apply button */
+.pibm-single-job .apply-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #0066cc;
+    color: white !important;
+    border-radius: 6px;
+    margin-top: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.pibm-single-job .apply-button:hover {
+    background: #004c99;
+}
+
+/* Scope styles only to this block */
+.pibm-widget-list {
+    padding: 0rem 0;
+    font-family: inherit; /* inherit the theme font */
+}
+
+/* Job list container */
+.pibm-widget-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual job item */
+.pibm-widget-list li {
+    padding: 0.75rem 0;
+    /* border-bottom: 1px solid #eee; */
+}
+
+/* Title link */
+.pibm-widget-list a.widget-title {
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.pibm-widget-list a.widget-title:hover {
+    text-decoration: underline;
+}
+
+/* Optional meta line under title */
+.pibm-widget-list .widget-info {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+/* Newsletter subscription box */
+.newsletter-box {
+    max-width: 400px;
+    float: left;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    /* border: 1px solid #393434; */
+    margin: 1rem auto;
+    box-shadow: 1 2px 4px rgba(0,0,0,0.06);
+    background: #38ACBD;
+    border: 1px solid #2f2c2c;
+}
+
+
+/* Reduce spacing between heading and label */
+.newsletter-heading {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-family:'Ubuntu';
+    font-size: 1.4rem;
+    color: white;
+}
+
+/* Label spacing reduced */
+.newsletter-label {
+    display: block;
+    margin-bottom: 0rem;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Style email input */
+.newsletter-form input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0 0rem 0.5rem 0rem;
+    background: white;
+    border: 1px solid #2f2c2c;
+    font-size: 1rem;
+}
+
+/* Subscribe button */
+.newsletter-button {
+    padding : 1rem 0.5rem;
+    line-height: 0px;
+    background: gray;
+    border: 1px solid #2f2f2f;
+    cursor: pointer;
+    font-size: 1rem;
+    vertical-align : middle;
+    color: white;
+    font-family:'Ubuntu';
+    font-weight: 600;
+}
+
+.newsletter-button:hover {
+    background: #a0a0a0;
+}
+
+.pibm-jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.job-card {
+    padding: 1.5rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.job-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.job-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.job-meta {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.job-excerpt {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.job-read-more {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.job-read-more:hover {
+    text-decoration: underline;
+}
+
+.landing-post-slider {
+    position: relative;
+    width: 100%;
+}
+
+.landing-post-slider .swiper-slide {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.landing-post-slider .slider-image {
+    height: 100%;
+    width: 100%;
+}
+
+.landing-post-slider .slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* key */
+}
+
+.landing-post-slider .slider-text { 
+	color: white;
+	height: 100%;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'DM Sans', sans-serif; 
+}
+
+@media (max-width: 768px) {
+
+.landing-post-slider .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.landing-post-slider .slider-image {
+    height: 220px;
+    width: 100%;
+}
+
+.landing-post-slider .slider-text {
+    color: white;
+    padding: 1.25rem;
+    justify-content: flex-start; /* vertical centering */
+    font-family: 'DM Sans', sans-serif;
+}
+
+}
+
+.swiper-slide.bg-1 .slider-text {
+    background-color: #E09F09;
+}
+
+.swiper-slide.bg-2 .slider-text {
+    background-color: #CD2E89;
+}
+
+.swiper-slide.bg-3 .slider-text {
+    background-color: #38ACBD;
+}
+
+.landing-post-slider .slider-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.landing-post-slider .slider-author {
+    font-size: 0.85rem;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.landing-post-slider .slider-excerpt {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.landing-post-slider .slider-readmore {
+    font-size: 0.95rem;
+    color: white;
+    text-decoration: underline;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Hide arrows by default */
+.landing-post-slider .swiper-button-next,
+.landing-post-slider .swiper-button-prev {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);    
+}
+
+
+/* Show arrows when hovering the slider */
+.landing-post-slider:hover .swiper-button-next,
+.landing-post-slider:hover .swiper-button-prev {
+    opacity: 1;
+}
+
+.landing-post-slider .swiper-button-next::after,
+.landing-post-slider .swiper-button-prev::after {
+    font-size: 20px;          /* smaller arrow */
+    font-weight: bold;
+    color: white;
+}
+
+/* Optional: slightly darker on hover */
+.landing-post-slider .swiper-button-next:hover::after,
+.landing-post-slider .swiper-button-prev:hover::after {
+    color: white;
+}
