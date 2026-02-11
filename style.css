@@ -438,9 +438,9 @@ min-height: 3rem;
 	color: white;
 	height: 100%;
 	padding: 2rem;
+    justify-content: flex-start;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	font-family: 'DM Sans', sans-serif; 
 }
 
@@ -458,7 +458,9 @@ min-height: 3rem;
 }
 
 .landing-post-slider .slider-text {
+    background: red;
     color: white;
+    height: 100%;
     padding: 1.25rem;
     justify-content: flex-start; /* vertical centering */
     font-family: 'DM Sans', sans-serif;
