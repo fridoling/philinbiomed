@@ -203,7 +203,6 @@ min-height: 3rem;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-    font-family: inherit; /* Keep site font */
 }
 
 /* Title */
@@ -211,7 +210,8 @@ min-height: 3rem;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #222;
+    color: #333;
+    font-family: 'Ubuntu';
 }
 
 /* Meta list */
@@ -219,20 +219,20 @@ min-height: 3rem;
     list-style: none;
     padding: 0;
     margin: 1rem 0 2rem 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }
 
 .pibm-single-job .job-meta li {
-    padding: 0.5rem 0;
+    /* padding: 0.5rem 0; */
     display: flex;
-    justify-content: space-between;
+    gap: 8px;
     font-size: 1rem;
+    color: #333;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .pibm-single-job .job-meta li strong {
-    color: #444;
-    min-width: 110px;
+    color: #333;
+    font-family: 'Ubuntu';
 }
 
 /* Job description */
@@ -241,6 +241,7 @@ min-height: 3rem;
     line-height: 1.7;
     font-size: 1.05rem;
     color: #333;
+    font-family: 'DM Sans', sans-serif;
 }
 
 /* Links */
@@ -253,22 +254,78 @@ min-height: 3rem;
     text-decoration: none;
 }
 
-/* Apply button */
-.pibm-single-job .apply-button {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background: #0066cc;
-    color: white !important;
-    border-radius: 6px;
-    margin-top: 1.2rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.2s ease;
+.pibm-jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.pibm-single-job .apply-button:hover {
-    background: #004c99;
+.pibm-jobs-list .job-card {
+    padding: 1.5rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fff;
 }
+
+.pibm-jobs-list .job-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Ubuntu';    
+}
+
+.pibm-jobs-list .job-title a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Ubuntu';    
+}
+
+.pibm-jobs-list .job-post-date {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.pibm-jobs-list .job-meta {
+    list-style: none;
+    padding: 0;
+    /* margin: 1rem 0 2rem 0; */
+}
+
+.pibm-jobs-list .job-meta li {
+    /* padding: 0.5rem 0; */
+    display: flex;
+    gap: 8px;
+    font-size: 1rem;
+    color: #333;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.pibm-jobs-list .job-meta li strong {
+    color: #333;
+    font-family: 'Ubuntu';
+}
+
+.pibm-jobs-list .job-excerpt {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.pibm-jobs-list .job-read-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Ubuntu';
+}
+
+.pibm-jobs-list .job-read-more:hover {
+    text-decoration: underline;
+}
+
 
 /* Scope styles only to this block */
 .pibm-widget-list {
@@ -292,6 +349,7 @@ min-height: 3rem;
 /* Title link */
 .pibm-widget-list a.widget-title {
     font-family:'Ubuntu';
+    color : #333;
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -303,16 +361,18 @@ min-height: 3rem;
 
 /* Optional meta line under title */
 .pibm-widget-list .widget-info {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-style: italic;
     color: #666;
     margin-top: 0.25rem;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .pibm-widget-list .widget-text {
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 0.25rem;  
+    font-size: 0.9rem;
+    color : #333;
+    margin-top: 0.25rem;
+    font-family: 'DM Sans', sans-serif;
 }
 
 /* Newsletter subscription box */
@@ -372,52 +432,6 @@ min-height: 3rem;
 
 .newsletter-button:hover {
     background: #a0a0a0;
-}
-
-.pibm-jobs-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.job-card {
-    padding: 1.5rem;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    background: #fff;
-}
-
-.job-title {
-    margin: 0 0 0.5rem;
-    font-size: 1.4rem;
-}
-
-.job-title a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.job-meta {
-    font-size: 0.9rem;
-    color: #666;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-}
-
-.job-excerpt {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-}
-
-.job-read-more {
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.job-read-more:hover {
-    text-decoration: underline;
 }
 
 .landing-post-slider {
