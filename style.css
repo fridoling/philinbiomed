@@ -291,6 +291,7 @@ min-height: 3rem;
 
 /* Title link */
 .pibm-widget-list a.widget-title {
+    font-family:'Ubuntu';
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -303,8 +304,15 @@ min-height: 3rem;
 /* Optional meta line under title */
 .pibm-widget-list .widget-info {
     font-size: 0.85rem;
+    font-style: italic;
     color: #666;
     margin-top: 0.25rem;
+}
+
+.pibm-widget-list .widget-text {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;  
 }
 
 /* Newsletter subscription box */
